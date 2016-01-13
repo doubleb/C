@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int x,D,i;
+    scanf("%d",&D);
+    int tab[D];
+    for (i=0;i<D;i++){
+            scanf("%d",&tab[i]);
+    }
+    for (i=0;i<D;i++){
+        mySilnia(tab[i]);
+        printf("%d %d\n",(mySilnia(tab[i])%100)/10,mySilnia(tab[i])%10);
+   }
+    return 0;
+}
+
+int mySilnia(int x){
+    int n,i;
+    n=1;
+    for(i=2;i<=x;i++)
+    {
+        n=n*i;
+    }
+        return n;
+}
+
